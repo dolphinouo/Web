@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #38a1db;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 100% 0; }
+        }
+
+        #typing {
+            background: linear-gradient(90deg, #000, #fff, #000);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s infinite;
+        }
+
+        .typed-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+      
+        .skill {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0080ff, 0 0 35px hsl(229, 100%, 50%), 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+            box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0080ff, 0 0 35px #ff00de, 0 0 40px #3300ff, 0 0 50px #ff00de, 0 0 75px #ff00de;
+            transition: all 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+        }
+
+        .skill:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #ff00de, 0 0 17px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 37px #ff00de;
+        }
+
+        .skill i {
+            margin-right: 10px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .portfolio img {
+            width: 100%;
+            max-width: 32%;
+            margin-bottom: 2%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            margin: 0 15px;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .social-icon:hover {
+            color: #38a1db;
+        }
+
+        @keyframes blink {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #38a1db;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        #back-to-top:hover {
+            background-color: #4f4eff;
+        }
+
+        nav {
+    background-color: #1e3a8a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 8px;
+
+.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello, I am</h2>
+    <h1 id="typing">Dolphin</h1>
+    <p>I am Taiwan student</p>
+    <p>I also learn </p>
+    <div class="skills">
+        <div class="skill">
+            <i class="fas fa-camera"></i>
+            <span>Photographer</span>
+        </div>
+        <div class="skill">
+            <i class="fas fa-code"></i>
+            <span>Developer</span>
+        </div>
+    </div>
+
+    <h2>Work</h2>
+    <div class="portfolio">
+        <h3>dolphin_bot</h3>
+        <p>dolphin.bot is a Discord bot, Use Python code, support instruction</p>
+        <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+        <i class="fa-brands fa-python"></i>
+        <h3></h3>
+    </div>
+
+
+    <nav>
+        <ul>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#portfolio">作品集</a></li>
+            <li><a href="#contact">聯繫我</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="social-links">
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-reddit"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+</div>
+<a href="#" id="back-to-top">⬆️</a>
+<button id="theme-toggle">切換主題</button>
+<button {border-radius: 8px;}></button>
+
+
+<script>
+    function typeText(element, text) {
+        let i = 0;
+        const timer = setInterval(() => {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(timer);
+                element.classList.remove('typed-text');
+            }
+        }, 100);
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const typedElement = document.getElementById('typing');
+        const text = typedElement.innerHTML;
+        typedElement.innerHTML = '';
+        typedElement.classList.add('typed-text');
+        typeText(typedElement, text);
+    });
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("back-to-top").style.opacity = "1";
+        } else {
+            document.getElementById("back-to-top").style.opacity = "0";
+        }
+    };
+
+    document.getElementById("back-to-top").onclick = function(e) {
+        e.preventDefault();
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    document.getElementById("theme-toggle").onclick = function() {
+    document.body.classList.toggle("light-mode");
+    }
+
+
+</script>
+</body>
+</html>
